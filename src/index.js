@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import Login from './components/Login';
 import Signup from './components/Signup'
+import ItemScreen from './components/ItemScreen';
+import NavBar from './components/NavBar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -16,6 +18,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/item' element={<ItemScreen />} />
+        <Route path='/n' element={<NavBar />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

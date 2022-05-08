@@ -32,6 +32,9 @@ export default function Login() {
                 break;
         }
     }
+    const Login = ()=>{
+        console.log('Login')
+    }
     return (
         <div className="flex justify-center text-center items-center h-screen 
       w-12/12 bg-[url('./assets/bg-shop.png')] bg-cover bg-no-repeat">
@@ -52,14 +55,11 @@ export default function Login() {
                             <input type="text" value={phone} onChange={(e) => { onHandleChange(e, 'phone') }} className="w-6/6 mb-1 ml-10 h-10 rounded-md  hover:bg-gray-100" placeholder="Enter Phone" />
                             <input type="text" value={email} onChange={(e) => { onHandleChange(e, 'email') }} className="w-6/6 mb-1 ml-10 h-10 rounded-md  hover:bg-gray-100" placeholder="Enter Email" />
                         </div>
-                        <button className="w-2/6 rounded-3xl m-auto bg-blue-300 mt-4 p-1">Signup</button>
+                        <button onClick={()=>{Login()}} className="w-2/6 rounded-3xl m-auto bg-blue-300 mt-4 p-1">Signup</button>
                         <p>Already have an account??</p>
                     </Animate>
                 </AnimateGroup>
-
-                {/* <button className="w-2/6 rounded-3xl m-auto bg-blue-300  p-1">Login</button> */}
             </div>
-
         </div>
     )
 }
