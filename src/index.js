@@ -11,17 +11,23 @@ import Login from './components/Login';
 import Signup from './components/Signup'
 import ItemScreen from './components/ItemScreen';
 import NavBar from './components/NavBar';
+import Appcontext from './context/Appcontext';
+import CartProvide from './context/cartProvide';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/item' element={<ItemScreen />} />
-        <Route path='/n' element={<NavBar />} />
-      </Routes>
-    </BrowserRouter>
+    <Appcontext>
+      <CartProvide>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/item' element={<ItemScreen />} />
+            <Route path='/n' element={<NavBar />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvide>
+    </Appcontext>
   </React.StrictMode>
 );
 
