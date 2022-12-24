@@ -6,7 +6,7 @@ export default function CartProvide(props) {
 
     
     return (
-        <cartContext.Provider>
+        <cartContext.Provider value={'name'}>
             {props.children}
         </cartContext.Provider>
     )
